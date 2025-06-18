@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "legal-crawl-analysis"
+version = "0.1.0"
+description = "Legal Document Analysis System for CommonCrawl Data - Two-phase analysis for copyright clauses, access levels, and legal content"
+authors = ["Saber Zerhoudi <saber.zerhoudi@uni-passau.de>"]
+readme = "README.md"
+packages = [{include = "legal_crawl_analysis"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+# Web scraping and WARC processing
+requests = "^2.31.0"
+warcio = "^1.7.4"
+beautifulsoup4 = "^4.12.2"
+lxml = "^4.9.3"
+readability-lxml = "^0.8.1"
+# OpenAI integration
+openai = "^1.0.0"
+tiktoken = "^0.5.1"
+# URL and domain processing
+tldextract = "^5.0.0"
+# Data processing
+pandas = "^2.0.0"
+numpy = "^1.24.0"
+pyarrow = "^14.0.0"
+# Utilities
+python-dateutil = "^2.8.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.5.0"
+
+[tool.poetry.scripts]
+legal-crawl-analyzer = "legal_crawl_analysis.main:main"
+setup-environment = "legal_crawl_analysis.setup:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

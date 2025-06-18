@@ -1,0 +1,44 @@
+{
+  "crawl_info": {
+    "crawl_name": "CC-MAIN-2025-08",
+    "total_processing_time_seconds": 2121.111661672592,
+    "files_planned": 1
+  },
+  "phase_1_lightning_detection": {
+    "records_processed": 30084,
+    "legal_documents_found": 1328,
+    "detection_rate": 4.414306608163808,
+    "warc_files_created": 0
+  },
+  "phase_2_sophisticated_filtering": {
+    "input_documents": 1328,
+    "filtered_documents": 454,
+    "filter_rate": 34.18674698795181,
+    "warc_files_kept": 0,
+    "metadata_parquet_files": 0
+  },
+  "phase_3_passage_extraction": {
+    "input_documents": 454,
+    "extracted_passages": 1036,
+    "openai_tokens_used": 652494823,
+    "estimated_cost_usd": 19574.84469,
+    "final_warc_files": 1,
+    "final_metadata_files": 1,
+    "gpt_analysis_files": 1
+  },
+  "output_files": {
+    "phase1_warc_files": [],
+    "phase2_warc_files": [],
+    "phase2_metadata_files": [],
+    "phase3_warc_files": [
+      "analysis_output/CC-MAIN-2025-08/phase3_passages_and_warc/CC-MAIN-20250206114225-20250206144225-00000.warc_legal_docs.warc.gz"
+    ],
+    "phase3_metadata_files": [
+      "analysis_output/CC-MAIN-2025-08/phase3_passages_and_warc/CC-MAIN-20250206114225-20250206144225-00000.warc_legal_docs.warc_metadata.parquet"
+    ],
+    "phase3_gpt_files": [
+      "analysis_output/CC-MAIN-2025-08/phase3_passages_and_warc/CC-MAIN-20250206114225-20250206144225-00000.warc_legal_docs.warc_gpt_analysis.parquet"
+    ]
+  },
+  "timestamp": "2025-06-16T06:05:32.335050"
+}

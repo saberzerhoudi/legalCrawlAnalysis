@@ -1,0 +1,44 @@
+{
+  "crawl_name": "CC-MAIN-2025-08",
+  "start_time": "2025-06-16T05:30:11.222779",
+  "total_files_to_process": 1,
+  "phase_1": {
+    "completed": true,
+    "current_file_index": 0,
+    "stats": {
+      "crawl-data/CC-MAIN-2025-08/segments/1738831951398.56/warc/CC-MAIN-20250206114225-20250206144225-00000.warc.gz": {
+        "legal_docs_found": 1328,
+        "records_processed": 30084,
+        "timestamp": "2025-06-16T05:30:42.849466"
+      }
+    }
+  },
+  "phase_2": {
+    "completed": true,
+    "current_file_index": 0,
+    "stats": {
+      "CC-MAIN-20250206114225-20250206144225-00000.warc.warc": {
+        "filtered_docs": 454,
+        "timestamp": "2025-06-16T05:31:51.317860"
+      }
+    }
+  },
+  "phase_3": {
+    "completed": true,
+    "current_file_index": 0,
+    "stats": {
+      "CC-MAIN-20250206114225-20250206144225-00000.warc.warc": {
+        "extracted_passages": 1036,
+        "tokens_used": 652494823,
+        "timestamp": "2025-06-16T06:05:32.333604"
+      }
+    }
+  },
+  "overall_stats": {
+    "total_records_processed": 30084,
+    "legal_documents_found_phase1": 1328,
+    "legal_documents_filtered_phase2": 454,
+    "passages_extracted_phase3": 1036,
+    "total_openai_tokens_used": 652494823
+  }
+}
