@@ -543,10 +543,11 @@ class ThreePhaseLegalAnalyzer:
                         document_count += 1
                         logger.info(f"Phase 3: Processing document {document_count} - {url}")
                         
-                        # GPT passage extraction
+                        # Track tokens used for THIS document only
+                        previous_token_count = self.gpt_analyzer.total_tokens_used
                         gpt_result = self.gpt_analyzer.analyze_document(clean_text, url)
-                        if self.gpt_analyzer:
-                            total_tokens_used += self.gpt_analyzer.total_tokens_used
+                        tokens_for_this_doc = self.gpt_analyzer.total_tokens_used - previous_token_count
+                        total_tokens_used += tokens_for_this_doc
                         
                         # Prepare GPT analysis data
                         passage_data = {
@@ -562,7 +563,7 @@ class ThreePhaseLegalAnalyzer:
                             'jurisdiction_clauses_count': len(gpt_result.get('jurisdiction_clauses', [])),
                             'data_licensing_count': len(gpt_result.get('data_licensing', [])),
                             'extraction_timestamp': datetime.now().isoformat(),
-                            'tokens_used': self.gpt_analyzer.api_calls if self.gpt_analyzer else 0
+                            'tokens_used': tokens_for_this_doc
                         }
                         
                         extracted_passages.append(passage_data)
