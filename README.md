@@ -108,13 +108,6 @@ Structured Output (JSON, Parquet, Reports)
 
 ## Installation
 
-### Prerequisites
-
-- **Python**: 3.11 or higher
-- **Poetry**: For dependency management
-- **OpenAI API Key**: For GPT-4o analysis
-- **Storage**: Minimum 50GB free space for WARC files
-- **Memory**: Minimum 8GB RAM (16GB recommended for large analyses)
 
 ### Installation Steps
 
